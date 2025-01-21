@@ -8,7 +8,7 @@ To evaluate the use of basic authentication in NGINX to serve different upstream
 
 ## Directory Structure
 ```plaintext
-project/
+poc-nginx-auth/
 │
 ├── docker-compose.yml
 ├── central-node/
@@ -91,7 +91,7 @@ Each upstream node:
 
 ## Verification
 ### Running the docker compose
-In the terminal, run the following command from project root to start the docker nodes:
+In the terminal, run the following command from  root to start the docker nodes:
 ```bash
 docker-compose up -d
 ```
