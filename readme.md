@@ -81,8 +81,6 @@ This setup achieves:
 
 Using curl to test with the basic authentication in the header. You can decode the value using online base64decoder tool.
 
-`curl --location 'http://localhost:8081/' \
---header 'Authorization: Basic dXNlcjE6ODROZ05nMmtJYUVQY29OV0c2V0M='`
+`curl --location 'http://localhost:8081/' --header 'Authorization: Basic dXNlcjE6ODROZ05nMmtJYUVQY29OV0c2V0M='`
 
-`curl --location 'http://localhost:8082/' \
---header 'Authorization: Basic dXNlcjI6VTl6anFHMmNDTmtKQzFtRVZReFU='`
+`curl --location 'http://localhost:8082/' --header 'Authorization: Basic dXNlcjI6VTl6anFHMmNDTmtKQzFtRVZReFU='`
