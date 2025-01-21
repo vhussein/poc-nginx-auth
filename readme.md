@@ -44,7 +44,7 @@ This directory contains files for the first Nginx virtual host.
   
 - **`htpasswd`**
   - Contains hashed credentials for basic authentication for `site1`.
-  - Created using the `htpasswd` command.
+  - Created using the `htpasswd` command provided you have installed `httpd-tools`. For simplicity of this POC, I've created using an online tool (https://www.web2generators.com/apache-tools/htpasswd-generator).
   - Specifies usernames and passwords required to access the `site1` endpoint.
 
 - **`index.html`**
@@ -62,7 +62,7 @@ This directory contains files for the second Nginx virtual host. The structure i
 
 - **`htpasswd`**
   - Contains hashed credentials for basic authentication for `site2`.
-  - Separate from `site1/htpasswd`, allowing unique usernames and passwords.
+  - Separate from `site1/htpasswd`, allowing unique usernames and passwords. This is also generated as per site1 above.
 
 - **`index.html`**
   - A simple HTML file that serves as the "Hello World" page for `site2`.
