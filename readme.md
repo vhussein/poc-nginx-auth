@@ -20,7 +20,7 @@ poc-nginx-auth/
 
 # Directory Structure Explanation
 
-## Root Directory (`project/`)
+## Root Directory (`poc-nginx-auth/`)
 This is the main directory for the project, containing the necessary files and subdirectories to set up and run the application.
 
 ### `docker-compose.yml`
