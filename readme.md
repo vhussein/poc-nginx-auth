@@ -51,7 +51,7 @@ The central node:
 
 ## Upstream Nodes
 Each upstream node:
-- Listens on its own local Nginx instance.
+- Listens on its own local Nginx instance. In our setup, will follow BAU & new.
 - Serves static content (`index.html`) specific to its endpoint:
   - **Upstream Node 1**: Returns a "Hello from Upstream Node 1" message.
   - **Upstream Node 2**: Returns a "Hello from Upstream Node 2" message.
