@@ -77,7 +77,10 @@ This setup achieves:
 3. Port forwarding to enable accessing both sites on different ports locally (`8081` for `site1` and `8082` for `site2`).
 
 
-## Testing
+## Runing & Testing
+
+Run the Docker Compose stack from project root:
+`docker-compose up -d`
 
 Using curl to test with the basic authentication in the header. You can decode the value using online base64decoder tool.
 
