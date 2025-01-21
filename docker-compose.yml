@@ -1,22 +1,29 @@
 version: "3.9"
 
 services:
-  site1:
+  central-node:
     image: nginx:alpine
-    container_name: site1
+    container_name: central-node
     volumes:
-      - ./site1/default.conf:/etc/nginx/conf.d/default.conf
-      - ./site1/index.html:/usr/share/nginx/html/index.html
-      - ./site1/htpasswd:/etc/nginx/.htpasswd
+      - ./central-node/nginx.conf:/etc/nginx/nginx.conf
+      - ./central-node/htpasswd_api1:/etc/nginx/htpasswd_api1
+      - ./central-node/htpasswd_api2:/etc/nginx/htpasswd_api2
     ports:
-      - "8081:80"
-  
-  site2:
+      - "8080:80" # Central node exposed on port 8080 for incoming requests
+    depends_on:
+      - upstream-node1
+      - upstream-node2
+
+  upstream-node1:
     image: nginx:alpine
-    container_name: site2
+    container_name: upstream-node1
     volumes:
-      - ./site2/default.conf:/etc/nginx/conf.d/default.conf
-      - ./site2/index.html:/usr/share/nginx/html/index.html
-      - ./site2/htpasswd:/etc/nginx/.htpasswd
-    ports:
-      - "8082:80"
+      - ./upstream-node1/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./upstream-node1/index.html:/usr/share/nginx/html/index.html
+
+  upstream-node2:
+    image: nginx:alpine
+    container_name: upstream-node2
+    volumes:
+      - ./upstream-node2/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./upstream-node2/index.html:/usr/share/nginx/html/index.html
